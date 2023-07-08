@@ -1,0 +1,76 @@
+.add-review-modal-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  inset: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.add-review-modal {
+  background-color: #ef4f5f;
+  margin: 0;
+  max-width: 24rem;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  border: 1px solid var(--grey-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.add-review-modal h2 {
+  margin: 0;
+}
+
+.add-review-modal .add-review-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.add-review-modal .add-review-modal-header .fa-xmark {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.modal-content div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal-content div input {
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+}
+
+.modal-content div .rating-comment {
+  padding: 10px;
+}
+
+.add-review-modal button {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  width: 5rem;
+  margin: 10px auto;
+  cursor: pointer;
+  text-align: center;
+}
