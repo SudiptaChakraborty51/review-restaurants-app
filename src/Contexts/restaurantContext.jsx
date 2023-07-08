@@ -8,7 +8,7 @@ const RestaurantProvider = ({ children }) => {
   const initialState = {
     cuisineData: cuisineData,
     restaurantData: restaurantsData,
-    cuisineName: "",
+    cuisineId: "",
   };
   const [restaurantState, restaurantDispatch] = useReducer(
     restaurantReducer,
