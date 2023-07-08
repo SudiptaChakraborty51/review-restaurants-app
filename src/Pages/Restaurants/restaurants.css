@@ -1,0 +1,22 @@
+.cuisine-button-container {
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cuisine-button-container .cuisine-button {
+    background-color: #ef4f5f;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cuisine-button-container .cuisine-button:hover {
+    opacity: 0.8;
+}
