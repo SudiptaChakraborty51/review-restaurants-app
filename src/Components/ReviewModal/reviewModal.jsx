@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
 import "./reviewModal.css";
 import { RestaurantContext } from "../../Contexts/restaurantContext";
+import { useOutsideClick } from "../../Hooks/useOutsideClick";
 
 const ReviewModal = ({ id, setShowModal }) => {
+  const domNode = useOutsideClick(() => setShowModal((prev) => !prev));
   const { restaurantDispatch } = useContext(RestaurantContext);
 
   const [reviewInput, setReviewInput] = useState({
@@ -24,7 +26,7 @@ const ReviewModal = ({ id, setShowModal }) => {
 
   return (
     <div className="add-review-modal-container">
-      <div className="add-review-modal">
+      <div className="add-review-modal" ref={domNode}>
         <div className="add-review-modal-header">
           <h2>Add Your Review</h2>
           <i
@@ -41,7 +43,9 @@ const ReviewModal = ({ id, setShowModal }) => {
                 setReviewInput((prev) => ({ ...prev, rating: e.target.value }))
               }
             >
-              <option disabled value="">Select Rating</option>
+              <option disabled value="">
+                Select Rating
+              </option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>

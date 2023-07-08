@@ -74,3 +74,9 @@
   cursor: pointer;
   text-align: center;
 }
+
+select {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
