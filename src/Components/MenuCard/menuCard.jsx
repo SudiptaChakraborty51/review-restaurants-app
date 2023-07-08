@@ -1,9 +1,12 @@
 import React from "react";
 import "./menuCard.css";
+import { useNavigate } from "react-router-dom";
 
 const MenuCard = ({ menu, restaurantName }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="menu-card">
+    <div className="menu-card" onClick={() => navigate(`/${restaurantName}`)}>
       <img src={menu?.imgSrc} alt={menu?.name} />
       <div className="menu-card-content">
         <h4>{menu?.name}</h4>

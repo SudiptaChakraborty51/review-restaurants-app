@@ -1,0 +1,63 @@
+.restaurant-details {
+    display: flex;
+    margin: 10px 30px;
+    gap: 10rem;
+}
+
+.restaurant-details .restaurant-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.restaurant-details .restaurant-details-container .restaurant-details-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.restaurant-details .restaurant-details-container .restaurant-details-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.restaurant-details .restaurant-details-container .restaurant-details-content div p{
+    color: grey;
+    margin: 0;
+    padding: 2px;
+}
+.restaurant-details .restaurant-details-container button {
+    background-color: #ef4f5f;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.restaurant-details .restaurant-details-container button:hover {
+    opacity: 0.8;
+}
+
+.review-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.review-container .review-details-container {
+    width: 100%;
+}
+
+.restaurant-details .fa-arrow-left {
+    cursor: pointer;
+    font-size: 18px;
+}
