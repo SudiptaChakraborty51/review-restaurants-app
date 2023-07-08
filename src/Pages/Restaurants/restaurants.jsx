@@ -11,15 +11,11 @@ const Restaurants = () => {
     restaurantDispatch({ type: "SELECT_CUISINE", payload: cuisine.id });
   };
 
-  console.log(restaurantState.cuisineId);
-
   let filteredData = [];
 
   filteredData = restaurantState.restaurantData?.filter(
     ({ cuisine_id }) => cuisine_id === Number(restaurantState.cuisineId)
   );
-
-  console.log(filteredData);
 
   return (
     <div>
