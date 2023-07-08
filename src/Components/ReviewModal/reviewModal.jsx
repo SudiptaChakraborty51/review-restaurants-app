@@ -13,10 +13,12 @@ const ReviewModal = ({ id, setShowModal }) => {
   });
 
   const reviewSubmitHandler = () => {
-    restaurantDispatch({
-      type: "ADD_REVIEW",
-      payload: { id: id, review: reviewInput },
-    });
+    if (reviewInput?.rating !== "") {
+      restaurantDispatch({
+        type: "ADD_REVIEW",
+        payload: { id: id, review: reviewInput },
+      });
+    }
     setShowModal(false);
   };
 
