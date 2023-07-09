@@ -62,7 +62,7 @@ export const restaurantsData = [
         revName: "Kripla",
       },
     ],
-    averageRating: 4.3,
+    averageRating: 1.6,
     description: "Delicious pizzas and pasta.",
   },
   {
