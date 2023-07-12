@@ -13,9 +13,11 @@ const Restaurants = () => {
 
   let filteredData = [];
 
-  filteredData = restaurantState.restaurantData?.filter(
-    ({ cuisine_id }) => cuisine_id === Number(restaurantState.cuisineId)
-  );
+  if (restaurantState.cuisineId) {
+    filteredData = restaurantState.restaurantData?.filter(
+      ({ cuisine_id }) => cuisine_id === Number(restaurantState.cuisineId)
+    );
+  }
 
   return (
     <div>
@@ -33,19 +35,18 @@ const Restaurants = () => {
         ))}
       </div>
       <div className="restaurant-list">
-        {filteredData?.length > 0 &&
-          filteredData?.map((restaurant) => (
-            <div>
-              <h2>Dishes by {restaurant?.name}</h2>
-              <div className="menu-list">
-                {restaurant?.menu?.map((menu) => (
-                  <div key={menu.name}>
-                    <MenuCard menu={menu} restaurantName={restaurant.name} />
-                  </div>
-                ))}
-              </div>
+        {filteredData?.map((restaurant) => (
+          <div>
+            <h2>Dishes by {restaurant?.name}</h2>
+            <div className="menu-list">
+              {restaurant?.menu?.map((menu) => (
+                <div key={menu.name}>
+                  <MenuCard menu={menu} restaurantName={restaurant.name} />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+        ))}
       </div>
     </div>
   );

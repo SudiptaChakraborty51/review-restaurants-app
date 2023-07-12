@@ -20,14 +20,22 @@ const RestaurantDetails = () => {
   return (
     <div className="restaurant-details">
       {showModal && (
-        <ReviewModal setShowModal={setShowModal} id={selectedRestaurant?.id}/>
+        <ReviewModal setShowModal={setShowModal} id={selectedRestaurant?.id} />
       )}
-      <i className="fa-solid fa-arrow-left" onClick={() => navigate("/")}></i>
+      <i
+        className="fa-solid fa-arrow-left"
+        onClick={() => {
+          restaurantState.cuisineId = "";
+          navigate("/");
+        }}
+      ></i>
       <div className="restaurant-details-container">
         <h1>{selectedRestaurant?.name}</h1>
         <div className="restaurant-details-content">
           <div>
-            <p>{selectedRestaurant?.menu?.map((item) => item?.name).join(", ")}</p>
+            <p>
+              {selectedRestaurant?.menu?.map((item) => item?.name).join(", ")}
+            </p>
             <p>{selectedRestaurant?.address}</p>
             <p>Contact: {selectedRestaurant?.phone}</p>
             <p>Average Rating: {selectedRestaurant?.averageRating}</p>
